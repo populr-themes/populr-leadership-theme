@@ -1,0 +1,789 @@
+// Your entire stylesheet should be nested in the "html .themed" selector. This 
+// prevents your theme from accidentally overriding any styles in the Pop editor. 
+// Also, some javascript libraries (e.g. fancybox) append dom elements directly 
+// to the body. Add the ".themed" class to those elements and you can style them 
+// here as well. It's not a great solution, but at least it works!
+
+@import 'preboot';
+@import 'variables';
+
+
+body {
+	background: @background-color;
+}
+
+#reset > .global-reset();
+
+
+html .themed {
+  &#pop {
+    // Add any styles you need on "#pop" here
+    position: relative;
+    height: 100%;
+    z-index: 2;
+    overflow: hidden;
+  }
+  .header {
+    position: relative;
+    padding:38px 0;
+    
+    text-align: center;
+    color:#000;
+  }
+  .header .header-container {
+    text-align: left;
+    
+    border-color:#bfbfbf;
+    border-style: solid;
+    border-width:1px 0;
+    padding:12px 0;
+  }
+  .header .header-inner {
+    width:940px;
+    margin:0 auto;
+    overflow: hidden;
+  }
+  .header a.homebtn {
+    color:#fff;
+    display:block;
+    background: #cfcfcf;
+    font-size:12px;
+    text-transform:uppercase;
+    font-weight:bold;
+    text-decoration: none;
+    float:left;
+    padding-right:4px;
+  }
+  a.homebtn span.homebtn-text {
+    padding:8px;
+    display: block;
+    float:left;
+  }
+
+  .icon {
+    display: block;
+    width:26px;
+    height:26px;
+    text-indent:-9999px;
+  }
+
+  .icon-home {
+    background: url("@{base-url}/images/theme-leadershipmusic-home.jpg") no-repeat 0 0;
+    float:right;
+  }
+
+  .icon-facebook {
+    float:right;
+    background: url("@{base-url}/images/theme-leadershipmusic-facebook.jpg") no-repeat 0 0;
+    margin:0 6px;
+  }
+  .icon-twitter {
+    float:right;
+    background: url("@{base-url}/images/theme-leadershipmusic-twitter.jpg") no-repeat 0 0;
+    margin:0 4px;
+  }
+
+  h1.leadershiplogo {
+    background: url("@{base-url}/images/theme-leadershipmusic-logo.jpg") no-repeat 0 0;
+    width:302px;
+    height:260px;
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+    top:0;
+    left:50%;
+    margin-left:-151px;
+    .box-shadow(0 0 4px rgba(0,0,0,0.45));
+  }
+
+  h1.leadershiplogo span {
+    display: block;
+    width:302px;
+    height:8px;
+    background: @accent-color;
+    position: absolute;
+    bottom:-10px;
+    left:0;
+    .box-shadow(0 0 4px rgba(0,0,0,0.45));
+  }
+
+  
+  #main-content {
+  	text-align:center;
+  }
+
+  .pop-header-bg {
+    width: 100%;
+    height: 900px;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    .box-shadow( inset 0 0 21px rgba(0,0,0,0.65));
+    margin-bottom:100px;
+  }
+
+
+  .region1 {
+  	padding-top:200px;
+  	background: url("@{base-url}/images/bg-region1.png") repeat white;
+  	border-top:8px solid @accent-color;
+  }
+
+  .region2 {
+    padding-top:60px;
+    background:url("@{base-url}/images/theme-leadershipmusic-bg-region2.jpg") repeat 0 0;
+    -webkit-box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .container {
+    position: relative;
+    z-index:2;
+    width:940px;
+    min-height:610px;
+    height:auto !important;
+    height:610px;
+    margin:0 auto;
+    padding:38px;
+  }
+
+
+
+  .asset-container {
+  	margin-bottom:50px;
+  }
+  .columnizer-col1  {
+  	width:100%;
+  }
+  .columnizer-col2  {
+  	width:450px;
+  	margin-left:40px;
+  	float:left;
+  }
+  .columnizer-cols2 .first {
+  	margin-left:0 !important;
+  }
+
+  .columnizer-cols3 .first {
+  	margin-left:0 !important;
+  }
+  .columnizer-col3 {
+  	width:267px;
+  	margin-left:69px;
+  	float:left;
+  }
+  .columnizer-col4 {
+  	width:220px;
+  	margin-left:20px;
+  }
+  .columnizer-cols4 .first {
+  	margin-left:0 !important;
+  }
+
+
+  /************************************
+
+  Image Assets
+
+  **************************************/
+
+  .image-inner {
+    position: relative;
+    margin-bottom:8px;
+    display:block;
+    .box-shadow(0 0 3px rgba(0,0,0,0.65));
+  }
+  .image-inner span.zoom {
+    position: absolute;
+    left:0;
+    top:0px;
+    z-index:2;
+    width:100%;
+    height:100%;
+    -webkit-box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  }
+
+
+  .wrap-anchor {
+    cursor: pointer;
+  }
+
+
+  .next,
+  .prev {
+    margin:8px 4px 8px 0;
+  	width: 21px;
+  	height: 21px;
+  	display: block;
+  	text-indent: -9999px;
+  	background: white;
+    float:left;
+  	padding: 0;
+  	background: url("@{base-url}/images/theme-leadershipmusic-left-arrow.jpg") no-repeat 0 0;
+  }
+  .next {
+    background: url("@{base-url}/images/theme-leadershipmusic-right-arrow.jpg") no-repeat 0 0;
+  }
+
+  .region2 .prev {
+    background: url("@{base-url}/images/theme-leadershipmusic-left-arrow-white.jpg") no-repeat 0 0;
+  }
+
+  .region2 .next {
+   background: url("@{base-url}/images/theme-leadershipmusic-right-arrow-white.jpg") no-repeat 0 0; 
+  }
+
+  .slideshow {
+  	position: relative;
+  }
+  a.slide-image,
+  a.single-image {
+    line-height: 0;
+    display: block;
+    position: relative;
+  }
+
+  a.slide-image:hover span.zoom,
+  a.single-image:hover span.zoom{
+
+    background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
+  }
+
+  a.slide-image:hover img,
+  a.single-image:hover img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url("@{base-url}/desaturate.svg#greyscale");
+    filter: gray;
+  }
+
+  .asset-type-imagegroup img {
+    display: block;
+  }
+  
+  .asset-type-imagegroup .image-text {
+    clear:both;
+  }
+
+
+  .asset-type-imagegroup .single-image,
+  .asset-type-imagegroup .slide-image {
+  	line-height: 0;
+  	display: block;
+  }
+
+  .images .slide-image {
+  	display: none;
+  }
+  .images .slide-image:first-child {
+  	display: block;
+  }
+
+  /************************************
+
+  Text Assets
+
+  **************************************/
+
+  .columnizer-col1 .asset-type-text {
+  	text-align: center;
+  	padding-bottom:30px;
+  	border-top:3px solid #555556;
+    padding-top:3px;
+  }
+
+  .columnizer-col1 .asset-type-text .asset-inner {
+    padding:80px 80px;
+    background: @accent-color;
+    text-align: center;
+  }
+
+
+  /************************************
+
+  Video & Embed Assets
+
+  **************************************/
+  .video-container,
+  .embedded-container {
+  	position: relative;
+  	margin-bottom:25px;
+  }
+
+  .video-container > *,
+  .embedded-container > *{
+    z-index:2;
+    position:relative;
+  }
+  .populr-video-player,
+  .embedded-container  {
+  	border:5px solid white;
+  	position: relative;
+  	z-index:2;
+  	line-height:0;
+  	.box-shadow(0 0px 3px rgba(0,0,0,0.75));
+  }
+
+  .embedded-container {
+    border:none;
+    /* remove border since embeds are not calculated to inclue them properly */
+  }
+  
+
+  .populr-video-player > *,
+  .embedded-container .embedded-object > * {
+  	line-height: 1.1em;
+  }
+  
+  .video-container:after {
+  	content:'';
+  	width:100%;
+  	height:100%;
+  	background:white;
+  	position: absolute;
+  	left:0px;
+  	top:0px;
+  	z-index:-1;
+  	.box-shadow(0 0px 3px rgba(0,0,0,0.45));
+  	-moz-transform: rotate(1.1deg);
+	-webkit-transform: rotate(1.1deg);
+    -o-transform: rotate(1.1deg) ;
+    -ms-transform: rotate(1.1deg);
+    transform: rotate(1.1deg) ;
+  }
+
+  ul.playlist {
+  	background: #2A2A2A;
+	padding: 4px;
+	text-align: left;
+  }
+
+  ul.playlist li {
+  	display: inline;
+  }
+
+
+  .columnizer-col1 .video-container:after,
+  .columnizer-col1 .embedded-container:after {
+  	-moz-transform: rotate(0.8deg);
+	-webkit-transform: rotate(0.8deg);
+    -o-transform: rotate(0.8deg) ;
+    -ms-transform: rotate(0.8deg);
+    transform: rotate(0.8deg) ;
+  }
+
+  /************************************
+
+  Document Assets
+
+  **************************************/
+  ul.documents {
+  	position: relative;
+  }
+  ul.documents li {
+  	position: relative;
+  	display: block;
+    background: #383838;
+  }
+  
+
+  ul.documents li .document-item {
+
+  	padding:25px;
+  	margin-bottom:16px;
+  	.box-shadow(0 0px 3px rgba(0,0,0,0.65));
+  	.clearfix();
+  }
+  ul.documents li a {
+  	display: table;
+  	width:100%;
+  	text-decoration: none;
+  }
+  ul.documents li div.title {
+  	display: table-cell;
+  	vertical-align: middle;
+  	overflow: hidden;
+  	padding-right:15px;
+  }
+  ul.documents li div.document-download {
+  	display: table-cell;
+  	text-align:right;
+  	width:145px;
+  	vertical-align: middle;
+  }
+  ul.documents li div.download {
+  	text-align: left;
+  	width:108px;
+  	height:29px;
+  	text-indent:-9999px;
+  	background: url("@{base-url}/images/sprite.png") no-repeat -2px -12px;
+    float:right;
+  }
+
+  ul.documents li a:hover div.download {
+    background-position: -2px -41px;
+  }
+
+  ul.documents .extension {
+  	float:left;
+  	margin-right:17px;
+  	width:22px;
+  	height:28px;
+  	text-indent:-9999px;
+    margin-top:-5px;
+  	background: url("@{base-url}/images/sprite.png") no-repeat 0 -102px;
+  }
+  ul.documents .extension-zip {
+  	background-position: -66px -102px;
+  }
+  ul.documents .extension-pdf {
+  	background-position: -22px -102px;
+  }
+  ul.documents .extension-doc,
+  ul.documents .extension-docx {
+  	background-position: -44px -102px;
+  }
+  ul.documents .extension-ppt,
+  ul.documents .extension-pptx {
+  	background-position: -88px -102px;
+  	width:28px;
+  	height:22px;
+  }
+  ul.documents .extension-xls,
+  ul.documents .extension-xlsx {
+  	background-position: -84px -130px;
+  	width:28px;
+  	height:22px;
+  }
+  ul.documents .extension-txt,
+  ul.documents .extension-html {
+  	background-position: -112px -130px;
+  }
+  ul.documents .extension-jpg,
+  ul.documents .extension-jpeg,
+  ul.documents .extension-psd,
+  ul.documents .extension-gif,
+  ul.documents .extension-png,
+  ul.documents .extension-tiff,
+  ul.documents .extension-bmp {
+  	background-position: -116px -102px;
+  	width:24px;
+  }
+
+  .columnizer-col1 ul.documents li div.title {
+  	max-width:730px;
+  }
+  .columnizer-col2 ul.documents li div.title {
+  	max-width:245px;
+  }
+  .columnizer-col3 ul.documents li div.document-download,
+  .columnizer-col4 ul.documents li div.document-download {
+  	width:28px;
+  }
+  .columnizer-col3 ul.documents li div.download,
+  .columnizer-col4 ul.documents li div.download {
+  	width:28px;
+  	height:28px;
+  	margin:8px 0 9px 0;
+  	background-position: 0 -130px;
+  }
+  .columnizer-col4 ul.documents li div.title {
+  	max-width:30px;
+  }
+  .asset-type-documentgroup h2.asset-title {
+	 margin-bottom:8px;
+  }
+  /************************************
+
+  TYPOGRAPHY
+
+  **************************************/
+  &#pop {
+  	font-family: Helvetica, Arial, san-serif;
+  }
+
+
+  div.description ul,
+  div.body ul,
+  div.description ol,
+  div.body ol {
+    padding-left:40px;
+    margin-bottom:15px;
+
+  }
+
+  div.description ul li,
+  div.body ul li {
+    list-style-type:disc;
+    line-height:1.6em;
+
+    
+  }
+
+
+  div.description ol li,
+  div.body ol li {
+    list-style-type:decimal;
+    line-height:1.6em;
+  }
+
+
+  div.description,
+  div.body,
+  ul.documents li div.title {
+  	color:#3b3b3b;
+  	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  	font-size:16px;
+  	line-height:1.6em;
+  	text-align: left;
+  }
+
+  div.description a,
+  div.description a:active,
+  div.description a:visited,
+  div.body a,
+  div.body a:active,
+  div.body a:visited,
+  ul.documents li div.title a,
+  ul.documents li div.title a:active,
+  ul.documents li div.title a:visited {
+    color:@accent-color-link;
+  }
+  
+  div.description a:hover,
+  div.body a:hover,
+  ul.documents li div.title a:hover  {
+    color:@accent-color-link-hover;
+  }
+
+  div.description {
+    color:#3b3b3b;
+    font-size:16px;
+    line-height:1.4em;
+  }
+
+  .columnizer-col3 div.description {
+    font-size:14px;
+    line-height: 1.2em;
+  }
+
+  h2.asset-title {
+    font-size:22px;
+    line-height:1.1em;
+    text-transform: uppercase;
+    font-family: @headline-font-family;
+    color:@accent-color;
+    text-align:left;
+    margin-bottom:6px;
+  }
+
+
+  .asset-type-imagegroup h2.asset-title {
+    margin:0px 0 3px 0;
+    border-bottom:3px solid @accent-color;
+    padding-bottom:6px;
+
+  }
+
+  .columnizer-col1 .asset-type-imagegroup h2.asset-title {
+  	font-size:45px;
+  	font-family: @headline-font-family;
+    font-weight: 100;
+
+  }
+
+
+  .columnizer-col2 .asset-type-imagegroup h2.asset-title {
+  	
+  	font-family: @headline-font-family;
+  	text-align:left;
+    font-size:18px;
+    font-weight:500;
+  }
+
+  .columnizer-col3 .asset-type-imagegroup h2.asset-title {
+    
+    font-family: @headline-font-family;
+    text-align:left;
+    font-size:14px;
+    font-weight:500;
+  }
+
+
+  .columnizer-col1 .asset-type-text h2.asset-title {
+    font-weight: 100;
+    font-size: 52px;
+    color:white;
+    text-align: center;
+    margin-bottom:20px;
+  }
+  .columnizer-col1 .asset-type-text div.body {
+    color:@accent-color-link-hover;
+    font-style:normal;
+    font-size:21px;
+    line-height:1.6em;
+    text-align: center;
+  }
+
+  h2.asset-title a,
+  h2.asset-title a:active,
+  h2.asset-title a:visited {
+    color:@accent-color-link;
+    display:inline !important;
+  }
+
+  h2.asset-title a:hover {
+    color:@accent-color-link-hover;
+  }
+
+
+
+
+
+  .columnizer-col2 .asset-type-videogroup h2.asset-title,
+  .columnizer-col2 .asset-type-embedgroup h2.asset-title {
+  	color:#555556;
+  }
+
+
+
+  .columnizer-col2 .asset-type-text h2.asset-title {
+  	font-size:22px;
+    font-weight: 400;
+  	text-align:left;
+  	margin:0;
+  	padding:16px 22px;
+  	border-top:3px solid @accent-color;
+  	border-bottom:1px solid @accent-color;
+  }
+
+  .columnizer-col2 .asset-type-text div.body {
+  	font-size:16px;
+  	text-align: left;
+  	padding: 22px;
+  }
+  
+  .columnizer-col3 .asset-type-text h2.asset-title {
+  	font-size:16px;
+    font-weight:300;
+  	color:#fff;
+    padding:10px 8px;
+    background:@accent-color;
+  	text-align:left;
+  	margin-bottom:15px;
+  }
+
+  .columnizer-col3 .asset-type-text div.body {
+  	font-size:14px;
+  }
+
+
+
+  ul.documents li div.title {
+  	font-size:16px;
+  	line-height: 1.1em;
+    color:#fff;
+    padding-top:6px;
+  }
+
+  .asset-type-documentgroup h2.asset-title {
+  	font-size:28px;
+    font-weight:400;
+  }
+
+  .columnizer-col2 .asset-type-documentgroup h2.asset-title {
+  	font-size:18px;
+  }
+
+  .columnizer-col3 .asset-type-documentgroup h2.asset-title,
+  .columnizer-col4 .asset-type-documentgroup h2.asset-title {
+  	font-size:14px;
+  }
+
+  .columnizer-col3 ul.documents li div.title,
+  .columnizer-col4 ul.documents li div.title {
+  	font-size:14px;
+  }
+
+
+
+
+  /**********************************
+
+2nd Region 
+
+  ***********************************/
+
+  .region2 div.description,
+  .region2 div.body {
+  	color:#74c0c6;
+  }
+
+  .region2 h2.asset-title {
+  	color:#ffffff;
+  }
+
+
+  .region2 .asset-type-imagegroup h2.asset-title,
+  .region2 .asset-type-text h2.asset-title {
+    border-color:#fff;
+  }
+
+  .region2 ul.documents li .document-item {
+  	background: #b2bb1c;
+  }
+
+  .region2 .columnizer-col3 ul.documents li div.download,
+  .region2 .columnizer-col4 ul.documents li div.download {
+  	background-position: 0 -158px;
+  }
+
+  .region2 .columnizer-col2 .asset-type-videogroup h2.asset-title,
+  .region2 .columnizer-col2 .asset-type-embedgroup h2.asset-title {
+  	color:#c6c6c6;
+  }
+
+
+
+  .region2 .columnizer-col2 .asset-type-text h2.asset-title {
+  	color:#fff;
+  	padding:16px 22px;
+  }
+
+  .region2 .columnizer-col3 .asset-type-text h2.asset-title {
+    color:#fff;
+    background: #2f2f2f;
+  }
+
+
+  .region2 .columnizer-col1 .asset-type-text {
+    border-color:white;
+  }
+  .region2 .columnizer-col1 .asset-type-text .asset-inner {
+    background: #2f2f2f;
+  }
+
+  .region2 ul.documents li div.title {
+    color:#2f2f2f;
+  }
+
+  .region2 ul.documents li div.download {
+    background: url("@{base-url}/images/sprite2.png") no-repeat -2px -12px;
+  }
+
+  .region2 ul.documents .extension {
+    background: url("@{base-url}/images/sprite2.png") no-repeat 0 -102px;
+  }
+
+
+
+
+  
+}
+
+
