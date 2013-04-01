@@ -11,7 +11,7 @@ $(document).on('pop-initialized', function(){
   // pre-compile it, as Populr will not compile your
   // coffeescript to js code automatically.
 
-  $.fancybox.init();
+  // $.fancybox.init();
 
   $('.images').each(function() { 
   	  	var $prevArrow = $('<a href="#" class="prev">Prev</a>').appendTo($(this).parents('.image-inner')); 
@@ -25,19 +25,19 @@ $(document).on('pop-initialized', function(){
 		});
 	});
 
-    function setupFancybox() {
-	  $("a.fancybox").fancybox({
-	  	type: 'image'
-	  });
+ //    function setupFancybox() {
+	//   $("a.fancybox").fancybox({
+	//   	type: 'image'
+	//   });
 
-	  $('.images').each(function(index){
-	  	$(this).find('a').attr("rel","group_"+index);
-	  });
-	  $("a.fancybox_group").fancybox({
-	  	type: 'image'
-	  });
-	}
-	setupFancybox();
+	//   $('.images').each(function(index){
+	//   	$(this).find('a').attr("rel","group_"+index);
+	//   });
+	//   $("a.fancybox_group").fancybox({
+	//   	type: 'image'
+	//   });
+	// }
+	// setupFancybox();
 
 
   $('.region .asset-type-imagegroup').live('initialize', function(e, asset){
@@ -60,7 +60,7 @@ $(document).on('pop-initialized', function(){
 	    next:   $prevArrow, 
 	    prev:   $nextArrow
 	});
-	setupFancybox();
+	// setupFancybox();
   });
 
 });
