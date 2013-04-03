@@ -141,9 +141,9 @@ html .themed {
     position: relative;
     z-index:2;
     width:940px;
-    min-height:610px;
+    min-height:300px;
     height:auto !important;
-    height:610px;
+    height:300px;
     margin:0 auto;
     padding:38px;
   }
@@ -315,24 +315,12 @@ html .themed {
   	margin-bottom:25px;
   }
 
-  .video-container > *,
-  .embedded-container > *{
-    z-index:2;
-    position:relative;
-  }
   .populr-video-player,
   .embedded-container  {
-  	border:5px solid white;
-  	position: relative;
-  	z-index:2;
   	line-height:0;
   	.box-shadow(0 0px 3px rgba(0,0,0,0.75));
   }
 
-  .embedded-container {
-    border:none;
-    /* remove border since embeds are not calculated to inclue them properly */
-  }
   
 
   .populr-video-player > *,
@@ -340,42 +328,30 @@ html .themed {
   	line-height: 1.1em;
   }
   
-  .video-container:after {
-  	content:'';
-  	width:100%;
-  	height:100%;
-  	background:white;
-  	position: absolute;
-  	left:0px;
-  	top:0px;
-  	z-index:-1;
-  	.box-shadow(0 0px 3px rgba(0,0,0,0.45));
-  	-moz-transform: rotate(1.1deg);
-	-webkit-transform: rotate(1.1deg);
-    -o-transform: rotate(1.1deg) ;
-    -ms-transform: rotate(1.1deg);
-    transform: rotate(1.1deg) ;
-  }
+
 
   ul.playlist {
-  	background: #2A2A2A;
-	padding: 4px;
-	text-align: left;
+  	 background: #2A2A2A;
+	   padding: 4px;
+	   text-align: left;
   }
 
   ul.playlist li {
-  	display: inline;
+  	display: block;
+    float:left;
+    margin-right:4px;
+  }
+
+  ul.playlist li a {
+    display: block;
+    float:left;
+  }
+
+  ul.playlist li a img {
+    display: block;
   }
 
 
-  .columnizer-col1 .video-container:after,
-  .columnizer-col1 .embedded-container:after {
-  	-moz-transform: rotate(0.8deg);
-	-webkit-transform: rotate(0.8deg);
-    -o-transform: rotate(0.8deg) ;
-    -ms-transform: rotate(0.8deg);
-    transform: rotate(0.8deg) ;
-  }
 
   /************************************
 
@@ -583,14 +559,19 @@ html .themed {
   }
 
 
-  .asset-type-imagegroup h2.asset-title {
+  .asset-type-imagegroup h2.asset-title,
+  .asset-type-videogroup h2.asset-title,
+  .asset-type-embedgroup h2.asset-title,
+  .asset-type-documentgroup h2.asset-title {
     margin:0px 0 3px 0;
     border-bottom:3px solid @accent-color;
     padding-bottom:6px;
 
   }
 
-  .columnizer-col1 .asset-type-imagegroup h2.asset-title {
+  .columnizer-col1 .asset-type-imagegroup h2.asset-title,
+  .columnizer-col1 .asset-type-videogroup h2.asset-title,
+  .columnizer-col1 .asset-type-embedgroup h2.asset-title {
   	font-size:45px;
   	font-family: @headline-font-family;
     font-weight: 100;
@@ -598,7 +579,9 @@ html .themed {
   }
 
 
-  .columnizer-col2 .asset-type-imagegroup h2.asset-title {
+  .columnizer-col2 .asset-type-imagegroup h2.asset-title,
+  .columnizer-col2 .asset-type-videogroup h2.asset-title,
+  .columnizer-col2 .asset-type-embedgroup h2.asset-title {
   	
   	font-family: @headline-font-family;
   	text-align:left;
@@ -606,8 +589,9 @@ html .themed {
     font-weight:500;
   }
 
-  .columnizer-col3 .asset-type-imagegroup h2.asset-title {
-    
+  .columnizer-col3 .asset-type-imagegroup h2.asset-title,
+  .columnizer-col3 .asset-type-embedgroup h2.asset-title, 
+  .columnizer-col3 .asset-type-videogroup h2.asset-title  {
     font-family: @headline-font-family;
     text-align:left;
     font-size:14px;
@@ -640,16 +624,6 @@ html .themed {
   h2.asset-title a:hover {
     color:@accent-color-link-hover;
   }
-
-
-
-
-
-  .columnizer-col2 .asset-type-videogroup h2.asset-title,
-  .columnizer-col2 .asset-type-embedgroup h2.asset-title {
-  	color:#555556;
-  }
-
 
 
   .columnizer-col2 .asset-type-text h2.asset-title {
@@ -698,11 +672,13 @@ html .themed {
 
   .columnizer-col2 .asset-type-documentgroup h2.asset-title {
   	font-size:18px;
+    font-weight: 500;
   }
 
   .columnizer-col3 .asset-type-documentgroup h2.asset-title,
   .columnizer-col4 .asset-type-documentgroup h2.asset-title {
   	font-size:14px;
+    font-weight: 500;
   }
 
   .columnizer-col3 ul.documents li div.title,
@@ -742,12 +718,6 @@ html .themed {
   .region2 .columnizer-col4 ul.documents li div.download {
   	background-position: 0 -158px;
   }
-
-  .region2 .columnizer-col2 .asset-type-videogroup h2.asset-title,
-  .region2 .columnizer-col2 .asset-type-embedgroup h2.asset-title {
-  	color:#c6c6c6;
-  }
-
 
 
   .region2 .columnizer-col2 .asset-type-text h2.asset-title {
