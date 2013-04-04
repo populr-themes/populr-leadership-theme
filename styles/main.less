@@ -48,7 +48,7 @@ html .themed {
     display:block;
     background: #cfcfcf;
     font-size:12px;
-    text-transform:uppercase;
+    // text-transform:uppercase;
     font-weight:bold;
     text-decoration: none;
     float:left;
@@ -141,9 +141,9 @@ html .themed {
     position: relative;
     z-index:2;
     width:940px;
-    min-height:300px;
-    height:auto !important;
-    height:300px;
+    // min-height:300px;
+    // height:auto !important;
+    // height:300px;
     margin:0 auto;
     padding:38px;
   }
@@ -173,13 +173,13 @@ html .themed {
   	margin-left:69px;
   	float:left;
   }
-  .columnizer-col4 {
-  	width:220px;
-  	margin-left:20px;
-  }
-  .columnizer-cols4 .first {
-  	margin-left:0 !important;
-  }
+  // .columnizer-col4 {
+  // 	width:220px;
+  // 	margin-left:20px;
+  // }
+  // .columnizer-cols4 .first {
+  // 	margin-left:0 !important;
+  // }
 
 
   /************************************
@@ -302,7 +302,6 @@ html .themed {
     background: @accent-color;
     text-align: center;
   }
-
 
   /************************************
 
@@ -457,19 +456,14 @@ html .themed {
   .columnizer-col2 ul.documents li div.title {
   	max-width:245px;
   }
-  .columnizer-col3 ul.documents li div.document-download,
-  .columnizer-col4 ul.documents li div.document-download {
+  .columnizer-col3 ul.documents li div.document-download {
   	width:28px;
   }
-  .columnizer-col3 ul.documents li div.download,
-  .columnizer-col4 ul.documents li div.download {
+  .columnizer-col3 ul.documents li div.download {
   	width:28px;
   	height:28px;
   	margin:8px 0 9px 0;
   	background-position: 0 -130px;
-  }
-  .columnizer-col4 ul.documents li div.title {
-  	max-width:30px;
   }
   .asset-type-documentgroup h2.asset-title {
 	 margin-bottom:8px;
@@ -479,10 +473,10 @@ html .themed {
   TYPOGRAPHY
 
   **************************************/
+
   &#pop {
   	font-family: Helvetica, Arial, san-serif;
   }
-
 
   div.description ul,
   div.body ul,
@@ -497,8 +491,6 @@ html .themed {
   div.body ul li {
     list-style-type:disc;
     line-height:1.6em;
-
-    
   }
 
 
@@ -550,14 +542,13 @@ html .themed {
 
   h2.asset-title {
     font-size:22px;
-    line-height:1.1em;
-    text-transform: uppercase;
+    line-height:1.2em;
+    // text-transform: uppercase;
     font-family: @headline-font-family;
     color:@accent-color;
     text-align:left;
     margin-bottom:6px;
   }
-
 
   .asset-type-imagegroup h2.asset-title,
   .asset-type-videogroup h2.asset-title,
@@ -566,7 +557,6 @@ html .themed {
     margin:0px 0 3px 0;
     border-bottom:3px solid @accent-color;
     padding-bottom:6px;
-
   }
 
   .columnizer-col1 .asset-type-imagegroup h2.asset-title,
@@ -575,14 +565,11 @@ html .themed {
   	font-size:45px;
   	font-family: @headline-font-family;
     font-weight: 100;
-
   }
-
 
   .columnizer-col2 .asset-type-imagegroup h2.asset-title,
   .columnizer-col2 .asset-type-videogroup h2.asset-title,
   .columnizer-col2 .asset-type-embedgroup h2.asset-title {
-  	
   	font-family: @headline-font-family;
   	text-align:left;
     font-size:18px;
@@ -598,20 +585,24 @@ html .themed {
     font-weight:500;
   }
 
-
   .columnizer-col1 .asset-type-text h2.asset-title {
     font-weight: 100;
     font-size: 52px;
     color:white;
     text-align: center;
     margin-bottom:20px;
+    a, a:visited, a:active { color: #fff; }
+    a:hover { color: @accent-color-link-hover; }
   }
+
   .columnizer-col1 .asset-type-text div.body {
     color:@accent-color-link-hover;
     font-style:normal;
     font-size:21px;
     line-height:1.6em;
     text-align: center;
+    a, a:visited, a:active { color: @accent-color-link-hover; }
+    a:hover { color: #fff; }
   }
 
   h2.asset-title a,
@@ -650,17 +641,17 @@ html .themed {
     background:@accent-color;
   	text-align:left;
   	margin-bottom:15px;
+    a, a:visited, a:active { color: #fff; }
+    a:hover { color: @accent-color-link-hover; }
   }
 
   .columnizer-col3 .asset-type-text div.body {
   	font-size:14px;
   }
 
-
-
   ul.documents li div.title {
   	font-size:16px;
-  	line-height: 1.1em;
+  	line-height: 1.2em;
     color:#fff;
     padding-top:6px;
   }
@@ -698,10 +689,14 @@ html .themed {
   .region2 div.description,
   .region2 div.body {
   	color:#74c0c6;
+    a, a:visited, a:active { color: #74c0c6; }
+    a:hover { color: #fff; }
   }
 
   .region2 h2.asset-title {
   	color:#ffffff;
+    a, a:visited, a:active { color: #fff; }
+    a:hover { color: @accent-color-link-hover; }
   }
 
 
@@ -714,8 +709,7 @@ html .themed {
   	background: #b2bb1c;
   }
 
-  .region2 .columnizer-col3 ul.documents li div.download,
-  .region2 .columnizer-col4 ul.documents li div.download {
+  .region2 .columnizer-col3 ul.documents li div.download {
   	background-position: 0 -158px;
   }
 
@@ -749,11 +743,15 @@ html .themed {
   .region2 ul.documents .extension {
     background: url("@{base-url}/images/sprite2.png") no-repeat 0 -102px;
   }
-
-
-
-
   
 }
 
+@media all and (max-width: 960px) {
+  #populr > .mobile-reset();
+
+  .container, .header .header-inner {
+    width: auto !important;
+  }
+
+}
 
