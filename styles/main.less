@@ -189,100 +189,98 @@ html .themed {
   **************************************/
 
   .image-inner {
-    position: relative;
+    // position: relative;
     margin-bottom:8px;
     display:block;
     .box-shadow(0 0 3px rgba(0,0,0,0.65));
   }
-  .image-inner span.zoom {
-    position: absolute;
-    left:0;
-    top:0px;
-    z-index:2;
-    width:100%;
-    height:100%;
-    -webkit-box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
-    box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+  .image-inner .slideshow {
+    // position: absolute;
+    // left:0;
+    // top:0px;
+    // z-index:2;
+    // width:100%;
+    // height:100%;
+    // -webkit-box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    // box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
   }
-
 
   .wrap-anchor {
     cursor: pointer;
   }
 
+  // .next,
+  // .prev {
+  //   margin:8px 4px 8px 0;
+  // 	width: 21px;
+  // 	height: 21px;
+  // 	display: block;
+  // 	text-indent: -9999px;
+  // 	background: white;
+  //   float:left;
+  // 	padding: 0;
+  // 	background: url("@{base-url}/images/theme-leadershipmusic-left-arrow.jpg") no-repeat 0 0;
+  // }
+  // .next {
+  //   background: url("@{base-url}/images/theme-leadershipmusic-right-arrow.jpg") no-repeat 0 0;
+  // }
 
-  .next,
-  .prev {
-    margin:8px 4px 8px 0;
-  	width: 21px;
-  	height: 21px;
-  	display: block;
-  	text-indent: -9999px;
-  	background: white;
-    float:left;
-  	padding: 0;
-  	background: url("@{base-url}/images/theme-leadershipmusic-left-arrow.jpg") no-repeat 0 0;
-  }
-  .next {
-    background: url("@{base-url}/images/theme-leadershipmusic-right-arrow.jpg") no-repeat 0 0;
-  }
+  // .region2 .prev {
+  //   background: url("@{base-url}/images/theme-leadershipmusic-left-arrow-white.jpg") no-repeat 0 0;
+  // }
 
-  .region2 .prev {
-    background: url("@{base-url}/images/theme-leadershipmusic-left-arrow-white.jpg") no-repeat 0 0;
-  }
+  // .region2 .next {
+  //  background: url("@{base-url}/images/theme-leadershipmusic-right-arrow-white.jpg") no-repeat 0 0; 
+  // }
 
-  .region2 .next {
-   background: url("@{base-url}/images/theme-leadershipmusic-right-arrow-white.jpg") no-repeat 0 0; 
-  }
+  // .slideshow {
+  // 	position: relative;
+  // }
+  // a.slide-image,
+  // a.single-image {
+  //   line-height: 0;
+  //   display: block;
+  //   position: relative;
+  // }
 
-  .slideshow {
-  	position: relative;
-  }
-  a.slide-image,
-  a.single-image {
-    line-height: 0;
-    display: block;
-    position: relative;
-  }
+  // a.slide-image:hover span.zoom,
+  // a.single-image:hover span.zoom{
 
-  a.slide-image:hover span.zoom,
-  a.single-image:hover span.zoom{
+  //   background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
+  // }
 
-    background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
-  }
-
-  a.slide-image:hover img,
-  a.single-image:hover img {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
-    filter: url("@{base-url}/desaturate.svg#greyscale");
-    filter: gray;
-  }
+  // a.slide-image:hover img,
+  // a.single-image:hover img {
+  //   filter: grayscale(100%);
+  //   -webkit-filter: grayscale(100%);
+  //   -moz-filter: grayscale(100%);
+  //   -ms-filter: grayscale(100%);
+  //   -o-filter: grayscale(100%);
+  //   filter: url("@{base-url}/desaturate.svg#greyscale");
+  //   filter: gray;
+  // }
 
   .asset-type-imagegroup img {
     display: block;
   }
   
-  .asset-type-imagegroup .image-text {
-    clear:both;
-  }
+  // .asset-type-imagegroup .image-text {
+  //   clear:both;
+  // }
 
 
-  .asset-type-imagegroup .single-image,
-  .asset-type-imagegroup .slide-image {
-  	line-height: 0;
-  	display: block;
-  }
+  // .asset-type-imagegroup .single-image,
+  // .asset-type-imagegroup .slide-image {
+  // 	line-height: 0;
+  // 	display: block;
+  // }
 
-  .images .slide-image {
-  	display: none;
-  }
-  .images .slide-image:first-child {
-  	display: block;
-  }
+  // .images .slide-image {
+  // 	display: none;
+  // }
+  // .images .slide-image:first-child {
+  // 	display: block;
+  // }
 
   /************************************
 
@@ -745,6 +743,10 @@ html .themed {
   }
   
 }
+
+// Populr image slider
+#populr > #image-slider-themes > .basic();
+
 
 @media all and (max-width: 960px) {
   #populr > .mobile-reset();
