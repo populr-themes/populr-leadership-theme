@@ -22,8 +22,8 @@
         <div class="header-inner">
           <a href="http://leadershipmusic.org" class="homebtn"><span class="homebtn-text">Leadership Music Home </span><span class="icon icon-home"></span></a>
           <h1 class="leadershiplogo">Leadership Music<span></span></h1>
-          <a href="http://twitter.com/leadershipmusic" class="icon icon-twitter">Twitter</a>
-          <a href="http://facebook.com/leadershipmusic" class="icon icon-facebook">Facebook</a>
+          <a href="http://twitter.com/LMSummit" class="icon icon-twitter">Twitter</a>
+          <a href="http://www.facebook.com/leadershipmusicsummit" class="icon icon-facebook">Facebook</a>
         </div>
       </div>
     </div>
@@ -86,53 +86,24 @@
           {{/asset}}
 
           {{#asset "imagegroup" size="2"}}
-            {{{title}}}
-            <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image">
-                      <img alt="{{{title}}}" src="{{{resize original_url width=450 height=280}}}" width="450" height="280" /><span class="zoom"></span></a>
-                  {{/each}}
-                  </div>
+                {{{title}}}
+                <div class="image-inner">
+                  {{{imageslider images width="450" height="280"}}}
                 </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image">
-                    <img alt="{{{title}}}" src="{{{resize original_url width=450 height=280}}}" width="450" height="280" /><span class="zoom"></span></a>
-                {{/each}}
-              {{/if_many}}
-            </div>
-            <div class="image-text">
-              {{{description}}}
-            </div>
+                <div class="image-text">
+                  {{{description}}}
+                </div>
           {{/asset}}
-
-
 
           {{#asset "imagegroup" size="3"}}
-          {{{title}}}
-            <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=267 height=267}}}" width="267" height="267"/><span class="zoom"></span></a>
-                  {{/each}}
-                  </div>
+                {{{title}}}
+                <div class="image-inner">
+                  {{{imageslider images width="267" height="267"}}}
                 </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=267 height=267}}}" width="267" height="267" /><span class="zoom"></span></a>
-                {{/each}}
-              {{/if_many}}
-            </div>
-            <div class="image-text">
-              {{{description}}}
-            </div>
+                <div class="image-text">
+                  {{{description}}}
+                </div>
           {{/asset}}
-
 
 
           {{#asset "videogroup" size="1"}}
@@ -290,75 +261,32 @@
           {{#asset "imagegroup" size="1"}}
                 {{{title}}}
                 <div class="image-inner">
-                  {{#if_many images}}
-                    <div class="slideshow">
-                      <div class="images">
-                      {{#each images}}
-                        <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=940 height=398}}}" width="940" height="398" /><span class="zoom"></span></a>
-                      {{/each}}
-                      </div>
-                    </div>
-                  {{else}}
-                    {{#each images}}
-                      <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=940 height=398}}}" width="940" /><span class="zoom"></span></a>
-                    {{/each}}
-                  {{/if_many}}
+                  {{{imageslider images width="940" height="398"}}}
                 </div>
-
                 <div class="image-text">
                   {{{description}}}
                 </div>
           {{/asset}}
 
-
           {{#asset "imagegroup" size="2"}}
-            {{{title}}}
-            <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image">
-                      <img alt="{{{title}}}" src="{{{resize original_url width=450 height=280}}}" width="450" height="280" /><span class="zoom"></span></a>
-                  {{/each}}
-                  </div>
+                {{{title}}}
+                <div class="image-inner">
+                  {{{imageslider images width="450" height="280"}}}
                 </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image">
-                    <img alt="{{{title}}}" src="{{{resize original_url width=450 height=280}}}" width="450" height="280" /><span class="zoom"></span></a>
-                {{/each}}
-              {{/if_many}}
-            </div>
-            <div class="image-text">
-              {{{description}}}
-            </div>
+                <div class="image-text">
+                  {{{description}}}
+                </div>
           {{/asset}}
-
-
 
           {{#asset "imagegroup" size="3"}}
-          {{{title}}}
-            <div class="image-inner">
-              {{#if_many images}}
-                <div class="slideshow">
-                  <div class="images">
-                  {{#each images}}
-                    <a href="{{{original_url}}}" class="fancybox slide-image"><img alt="{{{title}}}" src="{{{resize original_url width=267 height=267}}}" width="267" height="267"/><span class="zoom"></span></a>
-                  {{/each}}
-                  </div>
+                {{{title}}}
+                <div class="image-inner">
+                  {{{imageslider images width="267" height="267"}}}
                 </div>
-              {{else}}
-                {{#each images}}
-                  <a href="{{{original_url}}}" class="fancybox single-image"><img alt="{{{title}}}" src="{{{resize original_url width=267 height=267}}}" width="267" height="267" /><span class="zoom"></span></a>
-                {{/each}}
-              {{/if_many}}
-            </div>
-            <div class="image-text">
-              {{{description}}}
-            </div>
+                <div class="image-text">
+                  {{{description}}}
+                </div>
           {{/asset}}
-
 
 
           {{#asset "videogroup" size="1"}}
