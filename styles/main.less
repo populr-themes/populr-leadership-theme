@@ -188,116 +188,44 @@ html .themed {
   **************************************/
 
   .image-inner {
-    // position: relative;
     margin-bottom:8px;
     display:block;
     .box-shadow(0 0 3px rgba(0,0,0,0.65));
-  }
-  .image-inner .slideshow {
-    // position: absolute;
-    // left:0;
-    // top:0px;
-    // z-index:2;
-    // width:100%;
-    // height:100%;
-    // -webkit-box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
-    // box-shadow:inset 0px 0px 1px 0px rgba(0, 0, 0, 0.45), inset 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
   }
 
   .wrap-anchor {
     cursor: pointer;
   }
 
-  // .next,
-  // .prev {
-  //   margin:8px 4px 8px 0;
-  // 	width: 21px;
-  // 	height: 21px;
-  // 	display: block;
-  // 	text-indent: -9999px;
-  // 	background: white;
-  //   float:left;
-  // 	padding: 0;
-  // 	background: url("@{base-url}/images/theme-leadershipmusic-left-arrow.jpg") no-repeat 0 0;
-  // }
-  // .next {
-  //   background: url("@{base-url}/images/theme-leadershipmusic-right-arrow.jpg") no-repeat 0 0;
-  // }
-
-  // .region2 .prev {
-  //   background: url("@{base-url}/images/theme-leadershipmusic-left-arrow-white.jpg") no-repeat 0 0;
-  // }
-
-  // .region2 .next {
-  //  background: url("@{base-url}/images/theme-leadershipmusic-right-arrow-white.jpg") no-repeat 0 0; 
-  // }
-
-  // .slideshow {
-  // 	position: relative;
-  // }
-  // a.slide-image,
-  // a.single-image {
-  //   line-height: 0;
-  //   display: block;
-  //   position: relative;
-  // }
-
-  // a.slide-image:hover span.zoom,
-  // a.single-image:hover span.zoom{
-
-  //   background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
-  // }
-
-  // a.slide-image:hover img,
-  // a.single-image:hover img {
-  //   filter: grayscale(100%);
-  //   -webkit-filter: grayscale(100%);
-  //   -moz-filter: grayscale(100%);
-  //   -ms-filter: grayscale(100%);
-  //   -o-filter: grayscale(100%);
-  //   filter: url("@{base-url}/desaturate.svg#greyscale");
-  //   filter: gray;
-  // }
-
   .asset-type-imagegroup img {
     display: block;
   }
   
-  .slide:before {
-    opacity: 0;
-    display: block;
-    position: absolute;
+  // .slide:before {
+  //   opacity: 0;
+  //   display: block;
+  //   position: absolute;
+  //   content: ' ';
+  //   width: 100%;
+  //   height: 100%;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 1000;
+  //   background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
+  //   pointer-events: none;
+  // }
+  // .slide:hover:before {
+  //   opacity: 1;
+  //   .transition(opacity 0.4s);
+  // }
+
+  
+
+  .image-overlay {
+    line-height: 1;
     content: ' ';
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
-    pointer-events: none;
+    background: rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
   }
-  .slide:hover:before {
-    opacity: 1;
-    .transition(opacity 0.4s);
-  }
-
-  // .asset-type-imagegroup .image-text {
-  //   clear:both;
-  // }
-
-
-  // .asset-type-imagegroup .single-image,
-  // .asset-type-imagegroup .slide-image {
-  // 	line-height: 0;
-  // 	display: block;
-  // }
-
-  // .images .slide-image {
-  // 	display: none;
-  // }
-  // .images .slide-image:first-child {
-  // 	display: block;
-  // }
 
   /************************************
 
@@ -697,6 +625,8 @@ html .themed {
 
   /**********************************
 
+
+
 2nd Region 
 
   ***********************************/
@@ -761,10 +691,26 @@ html .themed {
   
 }
 
-html.ie9, html.ie10 {
-  .themed {
-    .slide:before { z-index: -1; }
-    .slide:hover img { opacity: .5; }
+// html.ie9 .themed {
+//   .slide:before { z-index: -1; }
+//   .slide:hover img { opacity: .5; }
+// }
+
+.js .populr-image-slider .slide a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 55px;
+  text-decoration: none;
+  .opacity(0);
+  .transition(~'opacity 180ms ease-in-out');
+  &:hover {
+    .opacity(100);
   }
 }
 
