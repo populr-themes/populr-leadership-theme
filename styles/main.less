@@ -761,9 +761,11 @@ html .themed {
   
 }
 
-html.ie .themed {
-  .slide:before { z-index: -1; }
-  .slide:hover img { opacity: .5; }
+html.ie9, html.ie10 {
+  .themed {
+    .slide:before { z-index: -1; }
+    .slide:hover img { opacity: .5; }
+  }
 }
 
 // Populr image slider
