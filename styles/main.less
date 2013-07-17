@@ -4,8 +4,9 @@
 // to the body. Add the ".themed" class to those elements and you can style them 
 // here as well. It's not a great solution, but at least it works!
 
-@import 'preboot';
 @import 'variables';
+@import '//populr.me/assets/developers/populr_mixins.less';
+@import 'preboot';
 
 
 body {
@@ -69,7 +70,7 @@ html .themed {
 
   .icon-home {
     background: url("@{base-url}/images/theme-leadershipmusic-home.jpg") no-repeat 0 0;
-    float:right;
+    float:left;
   }
 
   .icon-facebook {
@@ -419,7 +420,7 @@ html .themed {
   **************************************/
 
   &#pop {
-  	font-family: Helvetica, Arial, san-serif;
+  	font-family: Helvetica, Arial, sans-serif;
   }
 
   div.description ul,
@@ -449,10 +450,16 @@ html .themed {
   div.body,
   ul.documents li div.title {
   	color:#3b3b3b;
-  	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    // font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    font-family: 'Century Gothic', Helvetica, Arial, sans-serif;
+    b, strong { font-family: 'Century Gothic Bold', Helvetica, Arial, sans-serif; }
   	font-size:16px;
   	line-height:1.6em;
   	text-align: left;
+    p, li {
+      font-family: 'Century Gothic', Helvetica, Arial, sans-serif;
+      b, strong { font-family: 'Century Gothic Bold', Helvetica, Arial, sans-serif; }
+    }
   }
 
   div.description a,
@@ -507,30 +514,35 @@ html .themed {
   .columnizer-col1 .asset-type-videogroup h2.asset-title,
   .columnizer-col1 .asset-type-embedgroup h2.asset-title {
   	font-size:45px;
-  	font-family: @headline-font-family;
-    font-weight: 100;
+  	// font-family: @headline-font-family;
+   //  font-weight: 100;
+    font-family: 'Novecento Wide Light', Helvetica, Arial, sans-serif;
   }
 
   .columnizer-col2 .asset-type-imagegroup h2.asset-title,
   .columnizer-col2 .asset-type-videogroup h2.asset-title,
   .columnizer-col2 .asset-type-embedgroup h2.asset-title {
-  	font-family: @headline-font-family;
-  	text-align:left;
+    text-align:left;
     font-size:18px;
-    font-weight:500;
+    // font-family: @headline-font-family;
+    // font-weight:500;
+    font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif;
   }
 
   .columnizer-col3 .asset-type-imagegroup h2.asset-title,
   .columnizer-col3 .asset-type-embedgroup h2.asset-title, 
   .columnizer-col3 .asset-type-videogroup h2.asset-title  {
-    font-family: @headline-font-family;
     text-align:left;
     font-size:14px;
-    font-weight:500;
+    // font-family: @headline-font-family;
+    // font-weight:500;
+    // font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif;
+    font-family: 'Novecento Wide Demi', serif;
   }
 
   .columnizer-col1 .asset-type-text h2.asset-title {
-    font-weight: 100;
+    // font-weight: 100;
+    font-family: 'Novecento Wide Light', Helvetica, Arial, sans-serif;
     font-size: 52px;
     color:white;
     text-align: center;
@@ -563,7 +575,8 @@ html .themed {
 
   .columnizer-col2 .asset-type-text h2.asset-title {
   	font-size:22px;
-    font-weight: 400;
+    // font-weight: 400;
+    font-family: 'Novecento Wide Medium', Helvetica, Arial, sans-serif;
   	text-align:left;
   	margin:0;
   	padding:16px 22px;
@@ -579,7 +592,8 @@ html .themed {
   
   .columnizer-col3 .asset-type-text h2.asset-title {
   	font-size:16px;
-    font-weight:300;
+    // font-weight:300;
+    font-family: 'Novecento Wide Normal', Helvetica, Arial, sans-serif;
   	color:#fff;
     padding:10px 8px;
     background:@accent-color;
@@ -602,18 +616,21 @@ html .themed {
 
   .asset-type-documentgroup h2.asset-title {
   	font-size:28px;
-    font-weight:400;
+    // font-weight:400;
+    font-family: 'Novecento Wide Medium', Helvetica, Arial, sans-serif;
   }
 
   .columnizer-col2 .asset-type-documentgroup h2.asset-title {
   	font-size:18px;
-    font-weight: 500;
+    // font-weight: 500;
+    font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif;
   }
 
   .columnizer-col3 .asset-type-documentgroup h2.asset-title,
   .columnizer-col4 .asset-type-documentgroup h2.asset-title {
   	font-size:14px;
-    font-weight: 500;
+    // font-weight: 500;
+    font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif;
   }
 
   .columnizer-col3 ul.documents li div.title,
