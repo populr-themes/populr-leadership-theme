@@ -202,26 +202,6 @@ html .themed {
     display: block;
   }
   
-  // .slide:before {
-  //   opacity: 0;
-  //   display: block;
-  //   position: absolute;
-  //   content: ' ';
-  //   width: 100%;
-  //   height: 100%;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 1000;
-  //   background:rgba(178,187,28,0.66) url("@{base-url}/images/magnifyingglass.png") no-repeat center center;
-  //   pointer-events: none;
-  // }
-  // .slide:hover:before {
-  //   opacity: 1;
-  //   .transition(opacity 0.4s);
-  // }
-
-  
-
   .image-overlay {
     line-height: 1;
     content: ' ';
@@ -243,7 +223,7 @@ html .themed {
   }
 
   .columnizer-col1 .asset-type-text .asset-inner {
-    padding:80px 80px;
+    padding: 80px;
     background: @accent-color;
     text-align: center;
   }
@@ -346,7 +326,7 @@ html .themed {
   }
 
   ul.documents li a:hover div.download {
-    background-position: -2px -41px;
+    background-position: -2px -41px !important;
   }
 
   ul.documents .extension {
@@ -359,30 +339,30 @@ html .themed {
   	background: url("@{base-url}/images/sprite.png") no-repeat 0 -102px;
   }
   ul.documents .extension-zip {
-  	background-position: -66px -102px;
+  	background-position: -66px -102px !important;
   }
   ul.documents .extension-pdf {
-  	background-position: -22px -102px;
+  	background-position: -22px -102px !important;
   }
   ul.documents .extension-doc,
   ul.documents .extension-docx {
-  	background-position: -44px -102px;
+  	background-position: -44px -102px !important;
   }
   ul.documents .extension-ppt,
   ul.documents .extension-pptx {
-  	background-position: -88px -102px;
+  	background-position: -88px -102px !important;
   	width:28px;
   	height:22px;
   }
   ul.documents .extension-xls,
   ul.documents .extension-xlsx {
-  	background-position: -84px -130px;
+  	background-position: -84px -130px !important;
   	width:28px;
   	height:22px;
   }
   ul.documents .extension-txt,
   ul.documents .extension-html {
-  	background-position: -112px -130px;
+  	background-position: -112px -130px !important;
   }
   ul.documents .extension-jpg,
   ul.documents .extension-jpeg,
@@ -391,7 +371,7 @@ html .themed {
   ul.documents .extension-png,
   ul.documents .extension-tiff,
   ul.documents .extension-bmp {
-  	background-position: -116px -102px;
+  	background-position: -116px -102px !important;
   	width:24px;
   }
 
@@ -401,18 +381,33 @@ html .themed {
   .columnizer-col2 ul.documents li div.title {
   	max-width:245px;
   }
-  .columnizer-col3 ul.documents li div.document-download {
-  	width:28px;
-  }
-  .columnizer-col3 ul.documents li div.download {
-  	width:28px;
-  	height:28px;
-  	margin:8px 0 9px 0;
-  	background-position: 0 -130px;
-  }
   .asset-type-documentgroup h2.asset-title {
 	 margin-bottom:8px;
   }
+
+  .columnizer-col3 ul.documents li {
+    .extension { display: none !important; }
+    .document-item { padding: 15px !important; }
+    div.title {
+      display: block !important;
+      padding: 0 !important;
+      max-width: none !important;
+      text-align: center !important;
+    }
+    div.document-download {
+      display: block !important;
+      margin: 10px auto 0 !important;
+      width: auto !important;
+    }
+    div.download {
+      float: none !important;
+      margin: 0 auto !important;
+      width: 108px !important;
+      height: 29px !important;
+      background-position: -2px -12px !important;
+    }
+  }
+
   /************************************
 
   TYPOGRAPHY
@@ -427,15 +422,14 @@ html .themed {
   div.body ul,
   div.description ol,
   div.body ol {
-    padding-left:40px;
-    margin-bottom:15px;
-
+    padding-left: 20px;
   }
 
   div.description ul li,
   div.body ul li {
     list-style-type:disc;
     line-height:1.6em;
+    margin: 15px 0;
   }
 
 
@@ -443,6 +437,7 @@ html .themed {
   div.body ol li {
     list-style-type:decimal;
     line-height:1.6em;
+    margin: 15px 0;
   }
 
 
@@ -450,7 +445,6 @@ html .themed {
   div.body,
   ul.documents li div.title {
   	color:#3b3b3b;
-    // font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     font-family: 'Century Gothic', Helvetica, Arial, sans-serif;
     b, strong { font-family: 'Century Gothic Bold', Helvetica, Arial, sans-serif; }
   	font-size:16px;
@@ -494,7 +488,6 @@ html .themed {
   h2.asset-title {
     font-size:22px;
     line-height:1.2em;
-    // text-transform: uppercase;
     font-family: @headline-font-family;
     color:@accent-color;
     text-align:left;
@@ -514,8 +507,6 @@ html .themed {
   .columnizer-col1 .asset-type-videogroup h2.asset-title,
   .columnizer-col1 .asset-type-embedgroup h2.asset-title {
   	font-size:45px;
-  	// font-family: @headline-font-family;
-   //  font-weight: 100;
     font-family: 'Novecento Wide Light', Helvetica, Arial, sans-serif;
   }
 
@@ -524,8 +515,6 @@ html .themed {
   .columnizer-col2 .asset-type-embedgroup h2.asset-title {
     text-align:left;
     font-size:18px;
-    // font-family: @headline-font-family;
-    // font-weight:500;
     font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif;
   }
 
@@ -534,14 +523,10 @@ html .themed {
   .columnizer-col3 .asset-type-videogroup h2.asset-title  {
     text-align:left;
     font-size:14px;
-    // font-family: @headline-font-family;
-    // font-weight:500;
-    // font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif;
     font-family: 'Novecento Wide Demi', serif;
   }
 
   .columnizer-col1 .asset-type-text h2.asset-title {
-    // font-weight: 100;
     font-family: 'Novecento Wide Light', Helvetica, Arial, sans-serif;
     font-size: 52px;
     color:white;
@@ -709,11 +694,6 @@ html .themed {
   
 }
 
-// html.ie9 .themed {
-//   .slide:before { z-index: -1; }
-//   .slide:hover img { opacity: .5; }
-// }
-
 .js .populr-image-slider .slide a.image-overlay {
   position: absolute;
   top: 0;
@@ -736,12 +716,94 @@ html .themed {
 #populr > #image-slider-themes > .basic();
 
 
-@media all and (max-width: 960px) {
+@media screen and (max-width: 1012px) {
   #populr > .mobile-reset();
 
   .container, .header .header-inner {
     width: auto !important;
+    max-width: 720px !important;
   }
 
+  h2.asset-title {
+    font-family: 'Novecento Wide Demi', Helvetica, Arial, sans-serif !important;
+    font-size: 24px !important;
+  }
+
+  div.description,
+  div.body,
+  ul.documents li div.title {
+    font-family: 'Century Gothic', Helvetica, Arial, sans-serif !important;
+    b, strong { font-family: 'Century Gothic Bold', Helvetica, Arial, sans-serif !important; }
+    font-size: 14px !important;
+    text-align: left !important;
+    p, li {
+      font-family: 'Century Gothic', Helvetica, Arial, sans-serif !important;
+      b, strong { font-family: 'Century Gothic Bold', Helvetica, Arial, sans-serif !important; }
+    }
+  }
 }
 
+@media screen and (max-width: 720px) {
+  .homebtn-text { display: none !important; }
+
+  .homebtn { 
+    margin-left: 5px !important;
+    padding-left: 5px !important;
+  }
+
+  .columnizer-col1 .asset-type-text .asset-inner {
+    padding: 40px !important;
+  }
+
+  ul.documents li {
+    .extension { display: none !important; }
+    .document-item { padding: 15px !important; }
+    div.title {
+      display: block !important;
+      padding: 0 !important;
+      max-width: none !important;
+      text-align: center !important;
+    }
+    div.document-download {
+      display: block !important;
+      margin: 10px auto 0 !important;
+      width: auto !important;
+    }
+    div.download {
+      float: none !important;
+      margin: 0 auto !important;
+      width: 108px !important;
+      height: 29px !important;
+      background-position: -2px -12px !important;
+    }
+  }
+  // .columnizer-col3 ul.documents li div.download {
+  // }
+}
+
+@media screen and (max-width: 480px) {
+  .columnizer-col1 .asset-type-text .asset-inner {
+    padding: 20px !important;
+  }
+
+  .container {
+    padding: 20px !important;
+  }
+
+  .columnizer-row {
+    margin-bottom: 0 !important;
+  }
+
+  .asset {
+    margin: 20px 0 !important;
+  }
+
+  .columnizer-col2 .asset-type-text {
+    h2.asset-title { padding: 10px 0 !important; }
+    div.body { padding: 15px 0 !important; }
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .homebtn, .icon-twitter, .icon-facebook { display: none !important; }
+}
